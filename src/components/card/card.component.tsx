@@ -1,4 +1,5 @@
 import './card.styles.scss';
+import { useEffect } from 'react';
 import { Product } from '../../routes/home/Home';
 import { Box, Image, Badge, ButtonGroup, IconButton } from '@chakra-ui/react';
 import Favorite from '../../assets/favorite.svg';
@@ -7,14 +8,18 @@ import { Outlet, Link } from 'react-router-dom';
 
 interface Props {
     product: Product;
+    isAdded: (id: number) => boolean;
+    addItem: (id: number) => void;
+    removeItem: (id: number) => void;
 }
 
 const Card = (props: Props) => {
-    const { product } = props;
+    const { product, isAdded, addItem, removeItem } = props;
     const showInfo = false;
 
-    const handleClick = (event: any) => {
-        console.log(product);
+    const addToCart = () => {
+        if (isAdded(product.id)) removeItem(product.id);
+        else addItem(product.id);
     };
 
     return (
@@ -26,7 +31,7 @@ const Card = (props: Props) => {
             borderRadius="lg"
             overflow="hidden"
             boxShadow="xs"
-            onClick={handleClick}
+            // onClick={addToCart}
         >
             <Box className="float-buttons-container" mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
                 <ButtonGroup
@@ -45,7 +50,12 @@ const Card = (props: Props) => {
                         aria-label="Add to favorites"
                         icon={<img src={Favorite} alt="favorite" />}
                     />
-                    <IconButton aria-label="Add to cart" icon={<img src={Cart} alt="cart" />} />
+                    <IconButton
+                        className={isAdded(product.id) ? 'active' : ''}
+                        onClick={addToCart}
+                        aria-label="Add to cart"
+                        icon={<img src={Cart} alt="cart" />}
+                    />
                 </ButtonGroup>
             </Box>
             <div className="img-container">

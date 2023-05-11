@@ -8,16 +8,18 @@ const App = () => {
     // The header should contain: Logo + search bar + Favorites menu + Cart menu
     return (
         <ProductsProvider>
-            <div className="container">
-                <Navigation />
-                <div className="content">
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        {/* <Route path="/favorite" element={<Store />} />
+            <CartProvider>
+                <div className="container">
+                    <Navigation />
+                    <div className="content">
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            {/* <Route path="/favorite" element={<Store />} />
                     <Route path="/cart" element={<About />} /> */}
-                    </Routes>
+                        </Routes>
+                    </div>
                 </div>
-            </div>
+            </CartProvider>
         </ProductsProvider>
     );
 };

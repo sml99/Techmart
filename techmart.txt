@@ -1,0 +1,30 @@
+React.js Challenge
+The challenge is to create a mini computers store web app 
+The app layout should contain: Header+ Content + Footer
+The header should contain: Logo + search bar + Favorites menu + Cart menu
+Footer should contain: Logo + contact information + Copyrights  
+
+Web app pages:
+Products page: for displaying computer hardware in shape of cards
+Product details page: displays the product details and only one image
+Product cards: 
+A card should display the following:
+Product thumbnail 
+Product title 
+Product price 
+Heart icon
+Add to cart icon
+
+App Features: 
+1-Search a product by name 
+2-Sort products by price (asc & desc)
+3-Add a product to favorites (should display in the header as dropdown a menu)
+4-Add a product to Cart (should display in the header as a dropdown menu)
+Resources 
+Base url : “ https://dummyjson.com ”
+Products: “/products”
+Product: “/products/id”
+Tools:
+Use Chakra-Ui styled components .
+Use SCSS for custom styling 
+Create a GitHub repository and send the link via email to: team@alamicompany.de

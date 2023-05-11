@@ -3,10 +3,11 @@ import Home from './routes/home/Home';
 import Navigation from './components/navigation/navigation.component';
 import './App.scss';
 import { CartProvider } from './context/cart.context';
+import { ProductsProvider } from './context/products.context';
 const App = () => {
     // The header should contain: Logo + search bar + Favorites menu + Cart menu
     return (
-        <CartProvider>
+        <ProductsProvider>
             <div className="container">
                 <Navigation />
                 <div className="content">
@@ -17,7 +18,7 @@ const App = () => {
                     </Routes>
                 </div>
             </div>
-        </CartProvider>
+        </ProductsProvider>
     );
 };
 

@@ -1,7 +1,8 @@
 import { useState, useEffect, useContext } from 'react';
 import CardsContainer from '../../components/card-container/cards-container.component';
-import data from '../../data/data.json';
+// import data from '../../data/data.json';
 import { useCart } from '../../context/cart.context';
+import { useProduct } from '../../context/products.context';
 export interface Product {
     id: number;
     title: string;
@@ -18,16 +19,10 @@ export interface Product {
 
 const Home = () => {
     // Products page: for displaying computer hardware in shape of cards
-    const [products, setProducts] = useState(data.products);
-    // const { getItemQuantity, incItemQuantity, decItemQuantity, removeItem } = useCart();
-
-    useEffect(() => {
-        //fetch products
-    });
-
+    const { filtredProducts } = useProduct();
     return (
         <>
-            <CardsContainer products={products} />
+            <CardsContainer products={filtredProducts} />
         </>
     );
 };

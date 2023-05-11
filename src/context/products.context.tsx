@@ -7,6 +7,7 @@ interface Props {
 
 interface ProductsProvider {
     filtredProducts: Product[];
+    products: Product[];
     setSearch: (search: string) => void;
 }
 export const ProductsContext = createContext({} as ProductsProvider);
@@ -18,7 +19,7 @@ export const ProductsProvider = (props: Props) => {
     const [products, setProducts] = useState<Product[]>([]);
     const [filtredProducts, setfiltredProducts] = useState<Product[]>([]);
     const [search, setSearch] = useState('');
-    const value = { filtredProducts, setSearch };
+    const value = { filtredProducts, products, setSearch };
 
     useEffect(() => {
         //fetch products

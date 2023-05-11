@@ -15,7 +15,7 @@ const FavsContext = createContext({} as FavsContext);
 
 export const useFavs = () => useContext(FavsContext);
 
-export const CartProvider = (props: Props) => {
+export const FavsProvider = (props: Props) => {
     const { children } = props;
     const [favs, setCartItems] = useState<number[]>([]);
 

@@ -1,5 +1,5 @@
 import { useContext, createContext, useEffect, useState, useCallback, ReactNode } from 'react';
-import { Product } from '../routes/home/Home';
+import { Product } from '../routes/Home';
 
 interface Props {
     children: ReactNode;

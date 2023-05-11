@@ -1,4 +1,4 @@
-import { Product } from '../../routes/home/Home';
+import { Product } from '../../routes/Home';
 import { Heading, Text, Image, CardBody, Stack, Card, Divider } from '@chakra-ui/react';
 import './mini-card.styles.scss';
 

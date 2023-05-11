@@ -1,5 +1,5 @@
-import { Product } from '../../routes/home/Home';
-import { Grid } from '@chakra-ui/react';
+import { Product } from '../../routes/Home';
+import './card-container.styles.scss';
 import Card from '../card/card.component';
 
 interface Props {
@@ -10,11 +10,11 @@ const CardsContainer = (props: Props) => {
     const { products } = props;
 
     return (
-        <Grid templateColumns="repeat(4, 1fr)" gap={6}>
+        <div className="grid-container">
             {products?.map((product) => (
                 <Card product={product} key={product.id} />
             ))}
-        </Grid>
+        </div>
     );
 };
 

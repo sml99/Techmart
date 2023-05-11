@@ -1,5 +1,5 @@
 import './card.styles.scss';
-import { Product } from '../../routes/home/Home';
+import { Product } from '../../routes/Home';
 import { Box, Image, Badge, ButtonGroup, IconButton } from '@chakra-ui/react';
 import Favorite from '../../assets/favorite.svg';
 import Cart from '../../assets/shopping-bag.svg';

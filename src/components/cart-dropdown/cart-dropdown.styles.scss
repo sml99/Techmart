@@ -5,12 +5,19 @@
     display: flex;
     flex-direction: column;
     padding: 5px;
+    padding-bottom: 12px;
     border: 1px solid black;
     background-color: white;
     top: 60px;
     right: 40px;
     z-index: 1000;
 
+    p {
+        padding: 8px;
+        padding-bottom: 4px;
+        width: 100%;
+        // text-align: center;
+    }
     .cart-items {
         height: 260px;
         display: flex;

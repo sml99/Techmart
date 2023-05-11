@@ -1,6 +1,6 @@
 import { Button, Divider } from '@chakra-ui/react';
-import CardsContainer from '../../components/card-container/cards-container.component';
-import { useProduct } from '../../context/products.context';
+import CardsContainer from '../components/card-container/cards-container.component';
+import { useProduct } from '../context/products.context';
 import { useEffect, useState } from 'react';
 
 export interface Product {

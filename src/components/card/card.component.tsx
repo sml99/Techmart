@@ -10,6 +10,7 @@ import { useFavs } from '../../context/favorite.context';
 interface Props {
     product: Product;
     oneProduct?: boolean;
+    miniCart?: boolean;
 }
 
 const Card = (props: Props) => {

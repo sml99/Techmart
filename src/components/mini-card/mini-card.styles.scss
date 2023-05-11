@@ -1,0 +1,31 @@
+.mini-cart-container {
+    height: auto;
+    min-height: 80px;
+    .mini-cart {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        gap: 2px;
+
+        .image-container {
+            padding: 2px;
+            flex: 3;
+            max-width: 100px !important;
+            img {
+                height: 60px !important;
+                border-radius: 8px;
+                // width: 100px;
+                // min-height: 100px;
+                object-fit: cover;
+                margin-right: 10px;
+            }
+        }
+        .text-container {
+            flex: 5;
+            h3 {
+                font-weight: bold;
+            }
+        }
+    }
+}

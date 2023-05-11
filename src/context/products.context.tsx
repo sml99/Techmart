@@ -19,12 +19,12 @@ export const ProductsProvider = (props: Props) => {
     const [products, setProducts] = useState<Product[]>([]);
     const [filtredProducts, setfiltredProducts] = useState<Product[]>([]);
     const [search, setSearch] = useState('');
-    const value = { filtredProducts, products, setSearch };
 
     useEffect(() => {
         //fetch products
         getProducts();
     }, []);
+
     useEffect(() => {
         //fetch products
         setfiltredProducts(products.filter((product) => product.title.toLowerCase().includes(search)));
@@ -35,5 +35,6 @@ export const ProductsProvider = (props: Props) => {
         setProducts((await data.json()).products);
     }, []);
 
+    const value = { filtredProducts, products, setSearch };
     return <ProductsContext.Provider value={value}>{children}</ProductsContext.Provider>;
 };
